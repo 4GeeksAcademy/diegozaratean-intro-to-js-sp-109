@@ -1,116 +1,121 @@
 console.log('hola desde main.js')
 
-// let nombre = 'santiago'
-// console.log('antes de la funcion '+ nombre)
-// console.log('despues de la funcion '+ nombre)
+// Array
+// Mario
+// Luigi
+// Bowser
+// Toad
+// Peach
 
-// function saludoAlumno(nombre){
-//     console.log('dentro de la funcion '+ nombre)
-//     console.log('Hola ' + nombre)
-// }
+let personajesMario = ['Mario','Luigi','Bowser','Toad','Peach', 'star']
 
-// saludoAlumno('Xavier')
-// console.log('flag1 '+ nombre)
-// saludoAlumno('Juan')
-// console.log('flag2 '+ nombre)
-// saludoAlumno('Nancy')
-// saludo()
-// saludo()
+console.log(personajesMario)
 
-// function transportar(origen,destino){
-//     console.log('saliendo de ' + origen)    
-//     console.log('transportando')    
-//     console.log('llegando a ' + destino)    
-// }
+console.log(personajesMario[0])
+console.log(personajesMario[1])
+console.log(personajesMario[2])
+console.log(personajesMario[3])
+console.log(personajesMario[4])
 
-// transportar('casa', 'gym')
-// transportar('gym', 'ofi')
-// transportar('ofi', 'casa')
-// // transportar()
-// transportar()
-// transportar()
-
-
-// function suma(a,b){
-//     // console.log('haciendo calculo')
-//     // console.log(a + b)
-//     console.log('antes del retrun')
-//     return a + b
-//     console.log('despues del retrun')
-// }
-
-// suma(7,3) /// 10 
-
-// console.log(suma(1,2))
-
-// hacer una funcion admitido que valide la edad de una persona e indique 'puedes entrar' o 'debes esperar'
-// function admitido(edad){
-//     if( edad >= 18){
-//         return 'puedes entrar'
-//     }else{
-//         return'debes esperar'
-//         console.log('me ven')
-//     }
-// }
-
-// let resultado = admitido(15)
-
-// console.log(resultado)
-
-// function getTax(income){   
-//     return income * 0.2
-// }
-
-// getTax(10000)
-
-// document.getElementById('total').innerText = getTax(10000)
-// resultado.innerText = getTax(10000)
-
-// console.log(resultado)
-
-// function suma(a,b){    
-//     return a + b
-// }
-
-// console.log(suma(2,2)) // 4
-// console.log(suma(5,8)) // 13
-// console.log(suma(6,0)) // 6
-// console.log(suma(7,1)) // 71
-
-// console.log('Antes del window onload')
-// window.onload = function (){
-//     console.log('Se ejecuto')
-// }
-// console.log('despues del window onload')
-
-// funcion declarativa
-saludoDeclarativo()
-function saludoDeclarativo(){
-    console.log('hola declarativo')
+// for(inicializacion;condicion;actualizacion){}
+for(let i =0; i < personajesMario.length; i++){
+    console.log(personajesMario[i]);
 }
 
 
-// funcion de expresión
-const saludExpresion = function (){
-    console.log('saludo expresion')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+// let numbers = [1,2,3,4]
+console.log(numbers)
+
+// i = i + 3 ======> i+=3
+// i = i + 1 ======> i++
+
+
+// i = 0 =====> 1
+// i = 1 =====> 2
+// i = 2 =====> 3
+// i = 3 =====> 4
+// i = 4 =====> numbers[4] no existe  undefinded
+
+
+// i = 0 =====> 1
+// i = 2 =====> 3
+// i = 4 =====> numbers[4] no existe  undefinded
+
+
+// i = 0 =====> 1
+// i = 3 =====> 4
+// i = 6 =====> 
+for(i = 0;i <= numbers.length; i+=3){
+    // console.log(i)
+    console.log(numbers[i])
 }
-saludExpresion()
 
 
-// funcion flecha
-const saludoFlecha = ()=>{
-    console.log('saludo flecha')
-    // this
+// crear un nuevo array con los personajes buenos
+let goodGamesNames = []
+for(i=0; i < personajesMario.length;i++){
+    if(personajesMario[i] != 'Bowser'){
+        goodGamesNames.push(personajesMario[i])
+    }
 }
-saludoFlecha()
+
+console.log(personajesMario)
+console.log(goodGamesNames)
+
+console.log(personajesMario.filter( (personaje)=> personaje != 'Bowser' ))
+
+console.log(numbers)
+console.log(numbers.filter( (numero)=> numero != 7 ))
+console.log(numbers.filter( (numero)=> numero > 7 ))
+console.log(numbers.filter( (numero)=> numero <= 15 ))
+console.log(numbers.filter( (numero)=> numero > 7 && numero <= 15 ))
 
 
-// PSEUDO CODIGO
-// desarrollar un generador de excusas de Quien,Accion, Cuando ,Que y Donde
-// 1. modificar html desde js
-// 2. tomar un array Quien y obtener un elemento aleatorio
-// 3. tomar un array Accion y obtener un elemento aleatorio
-// 4. tomar un array Cuando y obtener un elemento aleatorio
-// 5. tomar un array Que y obtener un elemento aleatorio
-// 6. tomar un array Donde y obtener un elemento aleatorio
-// 7. juntar todos los elementos aleatorios en un string
+// impirmir un array de los number multiplciados por 4 
+let newNumbers = []
+// 1,2,3,4 etc 4,8,12,16
+for(i = 0 ; i < numbers.length; i++){
+    console.log(numbers[i]*4)
+    newNumbers.push(numbers[i]*4)
+
+}
+
+console.log(numbers)
+console.log(newNumbers)
+
+let mapNumbers = numbers.map( (number)=> number * 4 )
+console.log(mapNumbers)
+
+console.log(personajesMario)
+console.log(personajesMario.map( (personaje)=> personaje + 's' ))
+
+
+personajesMario.forEach( (item)=>{
+    console.log(item)
+})
+
+console.log('Do while')
+let j = 20
+do{
+    console.log(j)
+    j++
+}while( j < 8)
