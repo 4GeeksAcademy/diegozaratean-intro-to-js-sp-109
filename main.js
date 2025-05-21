@@ -1,39 +1,56 @@
 console.log('hola desde main.js')
 
-// desarrollar un programa que calcule el impuesto que debo pagar dependiento de mi salario
-// si el salario es mayor o igual a 1000 imprimir debes pagar un 10% si no imprimir debes pagar un 5%
+let persona = {
+    nombre: 'juan',
+    edad: 30,
+    apellido: 'gonzalez',
+    skills: ['js','python','react'],
+    programar: function(){
+        console.log('estoy programando')
+    }
+}
+
+let arrayEjemplo = ['juan',30,'gonzalez']
+
+
+
+// objeto Perro/Gato  nombre, raza, color, Ladrar "wow/miau"
+let perro = {
+    nombre:'ares',
+    raza:'pitbull',
+    color:'gris',
+    ladrando: function(){
+        console.log('wow')
+    }
+
+}
+
+
 
 // PSEUDOCODIGO
-// definir variable salario y asignarle valor
-let salario = 5000
-// comparar el salario mayor o igual a mil
-//si salario igual o mayor a mil  
-// let mensaje = ''
-// if (salario >= 1000  ){
-//     // imprimir debes pagar 10%
-//      mensaje ='debes pagar 10%'
+// que al dar clickl sobre un boton cambie el texto del titulo a nuevo titulo y el color de fondo a rojo
+// DONE: agregar boton al html
+// vincular bootn con una accion js
+function cambiarTitulo(){
+    console.log('cambiarTitulo')
+    // DONE: cambiar texto a 'nuevo titulo'
+    document.getElementById('title').innerText = 'nuevo titlo' 
+    // DONE: cambiar color a rojo
+    document.getElementById('title').style.backgroundColor = 'red' 
+}
 
-// }else{
-//     // imprimir debes pagar 5%
-//      mensaje ='debes pagar 5%'
-// }
-// ternary operator
-// if(condicion){
-    //     que hago true
-    // }elser{
-        //     que hago si false
-        // }
-// (condicion) ? que hago true : que hago si false
-let mensaje = salario >= 1000   ? 'debes pagar 10%' :'debes pagar 5%'
-// document.getElementById("resultado").innerText = mensaje
 
-document.getElementById("resultado").insertAdjacentHTML(
-    "afterend",
-    `<div><h1> hola este es el impuesto</h1><p> mensaje $ ${mensaje}</p></div>`
-)
-        
-        
-        
-console.log(mensaje)
-console.log('p> mensaje $ ${mensaje}</p>')
-console.log(`p> mensaje $ ${mensaje}</p>`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
