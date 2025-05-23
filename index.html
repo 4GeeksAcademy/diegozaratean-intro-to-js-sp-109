@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .dado{
+                width: 100px;
+                height: 100px;
+                display: block;
+                border: 1px solid #000;
+                border-radius: 15px;
+                font-size: 60px;
+                text-align: center;
+                line-height: 100px;
+                box-shadow: black 5px 5px 12px 0px;
+        }
+    </style>
 </head>
 <body>
     <h1>Bievenidos a Js 👨🏼‍💻</h1>
 
-    <h2 id="title" style="color: aqua;"> titulo</h2>
+    <h2 id="title" > titulo</h2>
     <p class="text"> text1</p>
     <p > text2</p>
     <p class="text"> text3</p>
@@ -16,8 +29,17 @@
     <div id="example">
         hola <span style="display: none;"> mundo </span>
     </div>
-
     <button onclick="cambiarTitulo()">cambiar titulo</button>
+
+    <br><br><br><br>
+    <div id="dados">
+
+        <p>Primer dado: <span class="dado" id="dado1"> 0</span> </p>
+        <p>Segundo dado: <span class="dado" id="dado2"> 0</span></p>
+
+        <button id="boton">lanzar dados</button>
+    </div>
+
 
     <script src="main.js"></script>
     <script>
