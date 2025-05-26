@@ -12,6 +12,8 @@
                 border: 1px solid #000;
                 border-radius: 15px;
                 font-size: 60px;
+                min-width: 100px;
+                min-height: 100px;
                 text-align: center;
                 line-height: 100px;
                 box-shadow: black 5px 5px 12px 0px;
@@ -22,7 +24,7 @@
     <h1>Bievenidos a Js 👨🏼‍💻</h1>
 
     <h2 id="title" > titulo</h2>
-    <p class="text"> text1</p>
+    <p class="text" onclick="cambiarTitulo()"> text1</p>
     <p > text2</p>
     <p class="text"> text3</p>
 
@@ -38,6 +40,16 @@
         <p>Segundo dado: <span class="dado" id="dado2"> 0</span></p>
 
         <button id="boton">lanzar dados</button>
+    </div>
+
+    <br><br>
+    <div>
+        <label for="height">Alto</label>
+        <input type="number" name="height" id="height" placeholder="ingresa el alto" >
+        <label for="width">Ancho</label>
+        <input type="number" name="width" id="width" placeholder="ingresa el ancho">
+        <button id="resize" onclick="console.log('onlcik clik')">cambiar resolución</button>
+
     </div>
 
 

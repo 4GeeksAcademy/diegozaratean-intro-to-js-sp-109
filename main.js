@@ -61,13 +61,34 @@ document.getElementById('boton').addEventListener("click",throwDice)
 
 
 
+// PSEUDOCODIGO
+// haz un programa que permita modifcar el alto y el ancho de los dados
+// function cambiarDimension(){
+//     let alto = document.getElementById('height').value 
+//     let ancho = document.getElementById('width').value 
+//     document.getElementById('dado1').style.width = ancho + 'px' 
+//     document.getElementById('dado1').style.height = alto + 'px' 
+//     document.getElementById('dado2').style.width = ancho + 'px' 
+//     document.getElementById('dado2').style.height = alto + 'px' 
+// }
+
+let resizeBoton = document.getElementById('resize')
+// resizeBoton.addEventListener("click", cambiarDimension); 
+
+resizeBoton.addEventListener("click", function(){
+    let alto = document.getElementById('height').value 
+    let ancho = document.getElementById('width').value 
+    document.getElementById('dado1').style.width = ancho + 'px' 
+    document.getElementById('dado1').style.height = alto + 'px' 
+    document.getElementById('dado2').style.width = ancho + 'px' 
+    document.getElementById('dado2').style.height = alto + 'px'
+}); 
 
 
 
 
 
-
-
+setInterval(throwDice, 3000);
 
 
 
